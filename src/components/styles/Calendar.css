@@ -1,0 +1,173 @@
+/* Calendar container */
+.calendar-container {
+  display: flex;
+  align-items: flex-start;
+  
+}
+
+/* Calendar */
+.calendar {
+  text-align: center;
+  flex: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Year and month selection controls */
+.controls {
+  display: flex;
+  margin-left: 230px;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.year-selector {
+  display: flex;
+
+  margin-right: 100px;
+  margin-bottom: 2%;
+  align-items: center;
+}
+
+.year-selector label {
+  margin-left: 50%;
+  margin-right: 10px;
+
+}
+
+.year-selector input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Month selection cells */
+.month-selector {
+  display: flex;
+  flex-wrap: wrap; /* Allow months to wrap into multiple rows */
+  gap: 10px;
+}
+
+
+.month-cell {
+
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.month-cell:hover{
+  transform: scale(104%);
+  background-color: #cff6d4;
+}
+.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Date grid */
+.date-grid {
+  display: block;
+  margin: auto;
+  width: 800px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.date-cell {
+  padding-top: 25px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #202c16;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.date-cell:hover{
+  transform: scale(104%);
+  background-color: #cff6d4;
+}
+
+.date-cell.selected {
+  background-color: #2c8836;
+  color: #000;
+}
+
+.date-cell.disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+
+/* Time slots */
+.time-slots {
+  width: 400px;
+  margin-top: 80px;
+  margin-right: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.slot-options {
+  display: flex;
+  flex-wrap: wrap; /* Allow slot options to wrap into multiple rows */
+  gap: 5px;
+}
+
+.date-cell.fully-booked {
+  background-color: #ef7474;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.date-cell.partially-booked {
+  background-color: #fdfb78;
+  cursor: pointer;
+}
+
+.date-cell.green {
+  background-color: #abe0b1;
+  cursor: pointer;
+}
+
+.slot-option {
+  cursor: pointer;
+  width: 300px;
+  border: 1px solid #d1d9b5;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.slot-option.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.book-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slot-option.disabled {
+  background-color: #ccc; /* You can choose a color you prefer */
+  color: #999;
+  cursor: not-allowed;
+  
+}
+
+
+
+
+
+
+
+
