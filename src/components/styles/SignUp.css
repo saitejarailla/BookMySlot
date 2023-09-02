@@ -1,45 +1,88 @@
 /* SignUp.css */
 
 .signup-container {
-    width: 30%;
-    margin: 0 auto;
-    margin-top: 2%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .signup-input {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.send-otp-button,
+.verify-otp-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.send-otp-button:hover,
+.verify-otp-button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  color: #4caf50;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.go-to-login {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  font-size: 16px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .signup-container {
     width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
   }
-  
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .signup-input {
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
   .send-otp-button,
   .verify-otp-button {
-    background-color: #007bff;
-    color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
   }
-  
-  .send-otp-button:hover,
-  .verify-otp-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .success-message {
-    color: #4caf50;
-    margin-top: 10px;
-  }
-  
-  .go-to-login{
-    text-decoration: none;
-  }
+}

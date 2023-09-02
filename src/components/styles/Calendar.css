@@ -23,7 +23,7 @@
 
 .year-selector {
   display: flex;
-
+  font-size: 20px;
   margin-right: 100px;
   margin-bottom: 2%;
   align-items: center;
@@ -80,7 +80,7 @@
 
 .date-cell {
   padding-top: 25px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(84, 248, 103);
   border: 1px solid #202c16;
   border-radius: 5px;
   cursor: pointer;
@@ -96,8 +96,8 @@
 }
 
 .date-cell.disabled {
-  background-color: #ccc;
-  color: #999;
+  background-color: #8e8e8e;
+  color: #fdfdfd;
   cursor: not-allowed;
 }
 
@@ -121,7 +121,6 @@
 .date-cell.fully-booked {
   background-color: #ef7474;
   color: #fff;
-  cursor: not-allowed;
 }
 
 .date-cell.partially-booked {
@@ -158,8 +157,8 @@
 }
 
 .slot-option.disabled {
-  background-color: #ccc; /* You can choose a color you prefer */
-  color: #999;
+  background-color: #b2b2b2; /* You can choose a color you prefer */
+  color: #000000;
   cursor: not-allowed;
   
 }

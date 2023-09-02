@@ -1,51 +1,57 @@
 /* MyBookings.css */
 
 .my-bookings-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.booking-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Automatically adjust columns based on screen width */
+  gap: 20px;
+}
+
+.booking-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.booking-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.delete-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #ff4545;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
   .booking-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Display two cards in a row for small screens */
   }
-  
-  .booking-card {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .booking-card h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .booking-card p {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  .delete-button {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .delete-button:hover {
-    background-color: #ff4545;
-  }
-  
+}
