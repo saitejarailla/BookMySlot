@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import './styles/Navbar.css';
-import { Link } from 'react-router-dom';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React, { useState, useEffect } from "react";
+import "./styles/Navbar.css";
+import { Link } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const Navbar = ({ loggedUser, updateLoggedUser }) => {
   const [menuActive, setMenuActive] = useState(false);
@@ -16,15 +16,15 @@ const Navbar = ({ loggedUser, updateLoggedUser }) => {
         setMenuActive(false);
       }
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [windowWidth]);
 
   function handleLogout() {
-    localStorage.removeItem('loggedUser');
+    localStorage.removeItem("loggedUser");
     updateLoggedUser();
     setShow(false);
   }
@@ -48,17 +48,21 @@ const Navbar = ({ loggedUser, updateLoggedUser }) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          {<Button className="book-button" onClick={handleLogout}>Ok</Button>}
+          {
+            <Button className="book-button" onClick={handleLogout}>
+              Ok
+            </Button>
+          }
         </Modal.Footer>
       </Modal>
       <nav className="navbar">
         <div className="navbar-left">
-        <b>BookMySlot</b>
-          {(loggedUser && !showGreet) && (
+          <b>BookMySlot</b>
+          {loggedUser && !showGreet && (
             <p className="greet">
               Welcome Back,
               <br />
-              {loggedUser.split('@')[0]}
+              {loggedUser.split("@")[0]}
             </p>
           )}
         </div>
@@ -72,7 +76,7 @@ const Navbar = ({ loggedUser, updateLoggedUser }) => {
             </button>
           )}
           <ul
-            className={`navbar-links ${menuActive ? 'active' : ''}`}
+            className={`navbar-links ${menuActive ? "active" : ""}`}
             onClick={() => setMenuActive(!menuActive)}
           >
             <li>
@@ -107,4 +111,4 @@ const Navbar = ({ loggedUser, updateLoggedUser }) => {
   );
 };
 
-export default Navbar;
+export default Navbar;
